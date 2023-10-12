@@ -45,10 +45,11 @@ void inicializacion(){
   
   // Inicializa Minim
   minim = new Minim(this);
-  juegoMusic = minim.loadFile("juego.wav");
+  juegoMusic = minim.loadFile("juego.WAV");
   fx = minim.loadFile ("click.wav"); 
   ganarfx = minim.loadFile ("ganar.mp3"); 
   perderfx = minim.loadFile ("perder.wav"); 
+  perderVida = minim.loadFile ("vida.wav"); 
   
   
   

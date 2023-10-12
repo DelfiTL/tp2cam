@@ -4,13 +4,11 @@ void pelota(){
  mundo.add(circulo);
  circulo.attachImage(gatito); //carga de imagen
   circulo.setRestitution (0.6);//rebote
-//  circulo.setFriction (1000.0);
-//circulo.setDensity (2000);
+
   circulo.setName("gatito");
 }
 
 
-//pasan 15frames por cda colision, X3 vidas son 45
 int vida=3;
  void vidasCat(){
       if (vida==3){
@@ -20,16 +18,19 @@ int vida=3;
       image (heart, 200,20,55,50);
     }    if (vida==2){
 
+        perderVida.play();
       image (heart, 50,20,55,50);
       image (heart, 125,20,55,50);
       image (heart2, 200,20,55,50);
     }    if (vida==1){
 
+        perderVida.play();
       image (heart, 50,20,55,50);
       image (heart2, 125,20,55,50);
       image (heart2, 200,20,55,50);
 
     } if (vida<=0){
+        perderVida.play();
      pantalla=4;
     }    
     

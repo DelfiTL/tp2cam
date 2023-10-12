@@ -1,4 +1,4 @@
-class Receptor { //<>//
+class Receptor {
 
   ArrayList <Blob> blobs;
   int tiempo_para_borrar = -15;

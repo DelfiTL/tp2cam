@@ -5,7 +5,7 @@ FCompound compuesto;
 
 
 
-int pantalla=3;
+int pantalla=1;
 FCircle circulo; 
 
 ////******Cámara OSC********/////
@@ -26,6 +26,7 @@ juegoMusic.setGain(-6);
   fx.setGain(-12);
   ganarfx.setGain(-6);
   perderfx.setGain(-6);
+  perderVida.setGain(-6);
   
   cargarimg();
   Gamesetup();
@@ -41,31 +42,27 @@ void draw() {
   }
   if (pantalla==3) { 
     ganar (); 
+    reproducirGanarfx = true;
     circulo.setPosition(70, 170);
     rot=0;
     // Detener la reproducción de juegoMusic en pantalla 3
     juegoMusic.pause();
+    perderVida.pause();
   }
   if (pantalla==4) {
     perder(); 
     circulo.setPosition(70, 180);
     rot=0;
+    
+reproducirPerderfx = true;
     // Detener la reproducción de juegoMusic en pantalla 4
     juegoMusic.pause();
+    
+    perderVida.pause();
   }
 
-
-  // si l gatito se sale de la pantalla
- /*   if (circulo.getX() > width || circulo.getX() < 0 || circulo.getY() > height || circulo.getY() < 0) {
-      pantalla = 4;
-      // Detener la reproducción de juegoMusic en pantalla 4
-    juegoMusic.pause();
-    }*/
     DrawBlob();
 }
-
-
-
 
 
 
